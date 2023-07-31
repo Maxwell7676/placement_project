@@ -1,0 +1,48 @@
+<%- include('./layouts/_header.ejs'); %>
+
+<style>
+  /* Add your custom CSS styling here */
+  .form-row {
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    padding: 10px;
+  }
+
+  /* Add pointer cursor to the name toggle */
+  .name-toggle {
+    cursor: pointer;
+    font-weight: bold; /* Added style for the name */
+  }
+
+  /* Use Flexbox to make the form span the full width */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formWrapped {
+    display: table-row;
+    /* border: 2px solid red; */
+  }
+</style>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+  <div class="row">
+    <!-- First column - Collapsible Form -->
+    <div class="col-md-7">
+        
+        <h1>Data Table with Bootstrap</h1>
+    
+            <table class="table table-striped table-info table-fixed">
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Job Role</th>
+                  <th scope="col">Company</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>

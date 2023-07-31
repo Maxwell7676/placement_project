@@ -1,0 +1,35 @@
+  <%- include('./layouts/_header.ejs'); %>
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container text-center">
+    <h1>CSV Download Page</h1>
+    <p>Click the button below to generate and download the CSV file.</p>
+    <a href="/csv/generate" class="btn btn-primary d-flex justify-content-center">Generate CSV</a>
+  </div>
+</body>
+</html>

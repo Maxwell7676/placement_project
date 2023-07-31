@@ -2,7 +2,7 @@
 const Student = require('../models/student');
 
 // Get all students
-exports.getAllStudents = async (req, res) => {
+exports.studentForm = async (req, res) => {
   try {
     const students = await Student.find();
     res.render('students', { students });
@@ -15,20 +15,24 @@ exports.getAllStudents = async (req, res) => {
 // Add a new student
 exports.addStudent = async (req, res) => {
   try {
-    const { name, college, status, DSA_Final_Score, WebD_Final_Score, React_Final_Score } = req.body;
+    const { name, college, job_Role, status, DSA_Final_Score, WebD_Final_Score, React_Final_Score } = req.body;
     const newStudent = new Student({
       name,
       college,
+      job_Role,
       status,
       DSA_Final_Score,
       WebD_Final_Score,
       React_Final_Score,
     });
 
-    await newStudent.save();
-    res.redirect('/students');
+    const data = await newStudent.save();
+    //console.log(data);
+    res.redirect('/studentList');
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');
   }
 };
+
+

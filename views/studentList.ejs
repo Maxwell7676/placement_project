@@ -1,0 +1,110 @@
+<%- include('./layouts/_header.ejs'); %>
+
+<style>
+  body {
+    background-color: rgba(210, 240, 236, 0.4);
+  }
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+  
+    min-height: 100vh;
+    min-width: 80vh;
+  }
+
+  /* Increase the width of the container */
+  .custom-container {
+    width: 200vh; 
+    /* max-width: 900px; Set a maximum width to limit the container size on larger screens */
+  }
+
+  .table {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .table thead th {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    font-weight: bold;
+  }
+
+  .table tbody td {
+    background-color: #f8f9fa;
+  }
+
+  .btn-group i {
+    margin-right: 5px;
+  }
+
+  .btn-group a,
+  .btn-group button {
+    color: #fff;
+  }
+
+  .btn-group .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  .btn-group .btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  }
+</style>
+
+<div class="center-container">
+  <div class="custom-container"> <!-- Use the custom-container class here -->
+    <div class="container">
+      <h1 class="text-center">List of Students</h1>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>Name</th>
+              <th>College</th>
+              <th>Job Role</th>
+              <th>Status</th>
+              <th>DSA Score</th>
+              <th>WebD Score</th>
+              <th>React Score</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% studentsList.forEach(student => { %>
+              <tr>
+                <td><%= student.name %></td>
+                <td><%= student.college %></td>
+                <td><%= student.job_Role %></td>
+                <td><%= student.status %></td>
+                <td><%= student.DSA_Final_Score %></td>
+                <td><%= student.WebD_Final_Score %></td>
+                <td><%= student.React_Final_Score %></td>
+                <td>
+                  <div class="btn-group" role="group">
+                    <!-- Select icon -->
+                    <a href="/dashboard/<%= student._id %>" class="btn btn-success" title="Select">
+                      <i class="fas fa-check"></i>Select
+                    </a>
+
+                    <!-- Delete icon -->
+                    <form action="/studentList/delete/<%= student._id %>" method="post">
+                      <button type="submit" class="btn btn-danger">
+                        <i class="fas fa-trash-alt"></i>Delete
+                      </button>
+                    </form>
+                  </div>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('./layouts/_footer.ejs'); %>

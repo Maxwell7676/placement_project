@@ -1,0 +1,110 @@
+
+<%- include('./layouts/_header.ejs'); %>
+
+  <style>
+    body{
+    background-color: rgba(210, 240, 236, 0.4);
+    }
+
+    .jumbotron {
+      background-color: #85b3e5;
+      color: #fff;
+      padding: 100px 0;
+    }
+
+    .jumbotron h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .jumbotron p {
+      font-size: 24px;
+    }
+
+    .btn-get-started {
+      background-color: #fff;
+      color: #007bff;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 12px 30px;
+      border-radius: 30px;
+      border: 2px solid #007bff;
+    }
+
+    .btn-get-started:hover {
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .feature-card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card h4 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .feature-card p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .footer {
+      background-color: #86b9ef;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+  </style>
+
+
+
+  <!-- Navbar goes here (You can add your own navbar) -->
+
+  <div class="jumbotron text-center">
+    <h1>Welcome to Placement</h1>
+    <p>Manage student interviews with ease.</p>
+    <a href="#" class="btn btn-get-started">Get Started</a>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Manage Interviews</h4>
+          <p>Keep track of student interviews, update statuses, and schedule new interviews easily.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Student Profiles</h4>
+          <p>Create and manage student profiles, including their scores, college, and contact information.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h4>Data Export</h4>
+          <p>Export student data to CSV files for easy analysis and reporting.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer text-center">
+    <p>&copy; 2023 Placement. All rights reserved.</p>
+  </div>
+
+  <!-- Bootstrap JS and other scripts (if needed) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <%- include('./layouts/_footer.ejs'); %>

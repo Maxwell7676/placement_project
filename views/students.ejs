@@ -1,0 +1,92 @@
+  <%- include('./layouts/_header.ejs'); %>
+
+  <style>
+   
+    body{
+    background-color: rgba(210, 240, 236, 0.4);
+    }
+
+    
+  .container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+
+  .form-group label {
+    font-weight: bold;
+  }
+
+  .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 10px;
+  }
+
+  .form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #007bff;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+
+
+
+  </style>
+
+  
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h2 class="text-center mb-4">Add New Student</h2>
+      <form action="/students" method="post">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="college">College:</label>
+          <input type="text" name="college" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="job_Role">Job Role:</label>
+          <input type="text" name="job_Role" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <select name="status" class="form-control" required>
+            <option value="placed">Placed</option>
+            <option value="not_placed">Not Placed</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="DSA_Final_Score">DSA Final Score:</label>
+          <input type="number" name="DSA_Final_Score" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="WebD_Final_Score">WebD Final Score:</label>
+          <input type="number" name="WebD_Final_Score" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="React_Final_Score">React Final Score:</label>
+          <input type="number" name="React_Final_Score" class="form-control" required>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Add Student</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  <%- include('./layouts/_footer.ejs'); %>
