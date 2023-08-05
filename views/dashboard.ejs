@@ -77,8 +77,19 @@ body{
                   <option value="" disabled selected>Select a company</option>
                   <option value="Amazon" <%= item.companyName === 'Amazon' ? 'selected' : '' %>>Amazon</option>
                   <option value="Flipkart" <%= item.companyName === 'Flipkart' ? 'selected' : '' %>>Flipkart</option>
-                  <!-- Add more company names here -->
+                  <option value="Google" <%= item.companyName === 'Google' ? 'selected' : '' %>>Google</option>
+                  <option value="Microsoft" <%= item.companyName === 'Microsoft' ? 'selected' : '' %>>Microsoft</option>
+                  <option value="Apple" <%= item.companyName === 'Apple' ? 'selected' : '' %>>Apple</option>
+                  <option value="Samsung" <%= item.companyName === 'Samsung' ? 'selected' : '' %>>Samsung</option>
+                  <option value="IBM" <%= item.companyName === 'IBM' ? 'selected' : '' %>>IBM</option>
+                  <option value="Intel" <%= item.companyName === 'Intel' ? 'selected' : '' %>>Intel</option>
+                  <option value="Oracle" <%= item.companyName === 'Oracle' ? 'selected' : '' %>>Oracle</option>
+                  <option value="Adobe" <%= item.companyName === 'Adobe' ? 'selected' : '' %>>Adobe</option>
+                  <option value="Facebook" <%= item.companyName === 'Facebook' ? 'selected' : '' %>>Facebook</option>
+                  <option value="LinkedIn" <%= item.companyName === 'LinkedIn' ? 'selected' : '' %>>LinkedIn</option>
+                 
                 </select>
+                
               </td>
               <td>
                 <input type="date" class="form-control" id="interviewDate<%= index %>" required value="<%= item.date %>">

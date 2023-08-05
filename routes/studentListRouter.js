@@ -7,7 +7,7 @@ const studentListController = require('../controllers/studentListController')
 
 router.get('/', studentListController.getAllStudentList);
 
-router.post('/', studentListController.addStudentList);
+//router.post('/', studentListController.addStudentList);
 
 router.post('/delete/:id', studentListController.deleteList)
 

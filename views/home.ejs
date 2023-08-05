@@ -1,9 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<%- include('./layouts/_header.ejs'); %>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement Cell</title>
   <style>
-    body{
-    background-color: rgba(210, 240, 236, 0.4);
+    /* Add the CSS styles here */
+    body {
+      background-color: rgba(210, 240, 236, 0.4);
+      text-align: center; /* Center the text in the body */
     }
 
     .jumbotron {
@@ -36,11 +42,18 @@
       color: #fff;
     }
 
+    .feature-cards-container {
+      display: flex;
+      justify-content: center; 
+      gap: 10px; 
+      flex-wrap: wrap; 
+    }
+
     .feature-card {
+      flex: 0 0 30%; 
       border: 1px solid #ccc;
       border-radius: 10px;
-      padding: 20px;
-      margin: 10px;
+      padding: 15px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
@@ -64,47 +77,39 @@
       margin: 0;
     }
   </style>
+</head>
 
-
-
+<body>
   <!-- Navbar goes here (You can add your own navbar) -->
 
-  <div class="jumbotron text-center">
+  <div class="jumbotron">
     <h1>Welcome to Placement</h1>
     <p>Manage student interviews with ease.</p>
-    <a href="#" class="btn btn-get-started">Get Started</a>
+    <a href="/user/signIn" class="btn btn-get-started">Get Started</a>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="feature-card">
-          <h4>Manage Interviews</h4>
-          <p>Keep track of student interviews, update statuses, and schedule new interviews easily.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-card">
-          <h4>Student Profiles</h4>
-          <p>Create and manage student profiles, including their scores, college, and contact information.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="feature-card">
-          <h4>Data Export</h4>
-          <p>Export student data to CSV files for easy analysis and reporting.</p>
-        </div>
-      </div>
+  <div class="container feature-cards-container">
+    <div class="feature-card">
+      <h4>Manage Interviews</h4>
+      <p>Keep track of student interviews, update statuses, and schedule new interviews easily.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Student Profiles</h4>
+      <p>Create and manage student profiles, including their scores, college, and contact information.</p>
+    </div>
+    <div class="feature-card">
+      <h4>Data Export</h4>
+      <p>Export student data to CSV files for easy analysis and reporting.</p>
     </div>
   </div>
 
-  <div class="footer text-center">
+  <div class="footer">
     <p>&copy; 2023 Placement. All rights reserved.</p>
   </div>
 
   <!-- Bootstrap JS and other scripts (if needed) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 
-
-  <%- include('./layouts/_footer.ejs'); %>
+</html>

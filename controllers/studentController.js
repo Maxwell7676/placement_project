@@ -27,8 +27,8 @@ exports.addStudent = async (req, res) => {
     });
 
     const data = await newStudent.save();
-    //console.log(data);
-    res.redirect('/studentList');
+    console.log(data);
+    res.redirect('/students');
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');

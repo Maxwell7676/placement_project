@@ -1,5 +1,7 @@
 const userModel = require('../models/user.js');
 
+
+
         // Sign in
         exports.signIn = async (req, res) => {
             res.render('signIn');
@@ -13,11 +15,12 @@ const userModel = require('../models/user.js');
             const {email, password} = req.body;
 
             const result = await userModel.findOne({email:email});
+            const data = req.cookies.CookieDash || [];
 
                 if(result != null){
                     if(result.email == email && result.password == password){
-                        req.flash('message', 'Sign in successful!');
-                        res.render('home');
+                        req.flash('success', 'Task completed successfully!');
+                        res.render('dashboard', {Result : data});
                     }else{
                         console.log(`email or password not valid`);
                     }
@@ -71,4 +74,12 @@ const userModel = require('../models/user.js');
       }
     });
   };
+  
+
+
+
+
+  
+
+
   

@@ -6,7 +6,7 @@ exports.getAllStudentList = async (req, res) => {
   try {
     const studentsList = await Student.find();
     //console.log(studentsList);
-    res.render('studentList', { studentsList : studentsList }); // Use the correct variable name here
+    res.render('studentList', { studentsList : studentsList });
   } catch (err) {
     console.error(err);
     res.status(500).send('Server Error');

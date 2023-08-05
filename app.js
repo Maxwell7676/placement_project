@@ -3,24 +3,41 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookie = require('cookie-parser')
 const session = require('express-session'); 
-const flash = require('connect-flash');
+const flash = require('express-flash');
+
 
 
 //const expressEjsLayouts = require('express-ejs-layouts');
 const app = express();
-const port = 3000; // Change the port number if needed
+const port = 4000; // Change the port number if needed
 
 // Set up MongoDB connection (Make sure you have MongoDB installed and running)
-mongoose.connect('mongodb+srv://ravi:1234@cluster0.872hpfd.mongodb.net/placement_cell?retryWrites=true&w=majority', {
+// mongoose.connect('mongodb+srv://ravi:1234@cluster0.872hpfd.mongodb.net/placement_cell?retryWrites=true&w=majority', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
+
+
+
+mongoose.connect('mongodb+srv://ravirathod123413:CTP5ZVOEdP0oBKlB@cluster0.0ixcgfg.mongodb.net/placement_cell', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+
+// mongoose.connect('mongodb://127.0.0.1:27017/employee_review_system', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
 
 
 
 //static file
 app.use(express.static('public'));
 app.use(cookie());
+app.use(flash());
 
 app.use(
   session({
@@ -56,6 +73,7 @@ const userRoutes = require('./routes/userRoutes');
 
 
 app.use('/dashboard', dashboard);
+
 app.use('/students', studentRoutes);
 app.use('/studentList', studentListRoutes)
 

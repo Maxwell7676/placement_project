@@ -6,6 +6,7 @@ const studentController = require('../controllers/studentController');
 
 router.get('/', studentController.studentForm);
 
+
 router.post('/', studentController.addStudent);
 
 
